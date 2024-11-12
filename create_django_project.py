@@ -50,10 +50,11 @@ def install_django():
   
 
 def start_django_project():
-    # Initializes the Django project with `django-admin startproject`.
+    """Initialise le projet Django avec `django-admin startproject`."""
     django_admin_path = os.path.join(VENV_DIR, 'bin', 'django-admin')
-    subprocess.check_call([django_admin_path, 'startproject', PROJECT_NAME, BASE_DIR])
-    print(f"Django project '{PROJECT_NAME}' initialized with `manage.py`.")
+    subprocess.check_call([django_admin_path, 'startproject', "core", BASE_DIR])
+    print(f"Projet Django '{PROJECT_NAME}' initialisé avec `manage.py`.")
+
 
 def create_gitignore():
     # Creates a .gitignore file with the specified rules.
